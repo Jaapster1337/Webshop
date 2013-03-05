@@ -30,8 +30,15 @@
 		 $controller .= 'Controller';	//$controller = 'UsersController'
 		 //echo $controller;
 		 $dispatch = new $controller($model, $controllerName, $action);
-		 
-		 
+		 if (method_exists($controller, $action))
+		 {
+			call_user_func_array(array($dispatch, $action), $querystring);
+			//call_user_func_array(array(new UsersController, Viewall), array(1,2,3))
+		 }
+		 else
+		 {
+			echo "method ".$action."NOT FOUND";
+		 }		 
 	}
 	
 	function __autoload($classname)
