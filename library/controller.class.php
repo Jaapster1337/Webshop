@@ -7,6 +7,11 @@
 		protected $_action;
 		protected $_template;
 		
+		protected function set($name, $value)
+		{
+			$this->_template->set($name, $value);
+		}
+		
 		//Constructor
 		public function __construct($model, $controller, $action)
 		{
