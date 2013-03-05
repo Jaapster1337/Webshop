@@ -17,11 +17,42 @@
 		var_dump($urlArray);
 		$querystring = $urlArray; //querystring = array(1, 2, 3)
 		var_dump($querystring);
+		
+		//Mapnaam voor de controllers
+		$controllerName = $controller; //$controller = 'users'
+		
+		/* De naam van de modelclass wordt User. Dus we moeten een hoofdletter maken
+		 * van de u en er moet een s achter de naam geplakt worden */
+		 $controller = ucwords($controller); //$controller = 'Users';
+		 //echo $controller;
+		 $model = rtrim($controller, 's'); //$model = 'User'
+		 //echo $model;
+		 $controller .= 'Controller';	//$controller = 'UsersController'
+		 //echo $controller;
+		 $dispatch = new $controller($model, $controllerName, $action);
+		 
+		 
 	}
 	
 	function __autoload($classname)
 	{
-	
+		//echo $classname;
+		if ( file_exists(ROOT.DS.'library'.DS.strtolower($classname).'.class.php'))
+		{
+			require_once(ROOT.DS.'library'.DS.strtolower($classname).'.class.php');
+		}
+		else if( file_exists(ROOT.DS.'application'.DS.'controllers'.DS.strtolower($classname).'.php'))
+		{
+			require_once(ROOT.DS.'application'.DS.'controllers'.DS.strtolower($classname).'.php');
+		}
+		else if ( file_exists(ROOT.DS.'application'.DS.',models'.DS.strtolower($classname).'.php'))
+		{
+			require_once(ROOT.DS.'application'.DS.',models'.DS.strtolower($classname).'.php');
+		}
+		else 
+		{
+			echo $classname." NOT FOUND"; 
+		}
 	}
 	
 	callHook($url);
