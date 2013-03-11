@@ -15,7 +15,9 @@
 		//Constructor
 		public function __construct($model, $controller, $action)
 		{
-			$this->_model = $model; //User
+			//echo $model;
+			$this->_model = new $model(); //Er wordt een nieuwe instantie gemaakt van de User class
+			//$this->_model = new User();
 			$this->_controller = $controller; //users
 			$this->_action = $action; //viewall
 			$this->_template = new Template($controller, $action); //new Template('users', 'viewall')

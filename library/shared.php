@@ -52,9 +52,9 @@
 		{
 			require_once(ROOT.DS.'application'.DS.'controllers'.DS.strtolower($classname).'.php');
 		}
-		else if ( file_exists(ROOT.DS.'application'.DS.',models'.DS.strtolower($classname).'.php'))
+		else if ( file_exists(ROOT.DS.'application'.DS.'models'.DS.strtolower($classname).'.php'))
 		{
-			require_once(ROOT.DS.'application'.DS.',models'.DS.strtolower($classname).'.php');
+			require_once(ROOT.DS.'application'.DS.'models'.DS.strtolower($classname).'.php');
 		}
 		else 
 		{
