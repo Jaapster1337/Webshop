@@ -42,7 +42,7 @@
 				for ($i = 0; $i < $numOfFields; $i++)
 				{
 					array_push($table, mysql_field_table($this->_result, $i));
-					array_push($field, mysql_field_table($this->_result, $i));
+					array_push($field, mysql_field_name($this->_result, $i));
 				}				
 				//var_dump($table);
 				//var_dump($field);
