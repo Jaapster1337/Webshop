@@ -6,4 +6,5 @@
 	 $url = (isset ($_GET['url'])) ? $_GET['url'] : header("location: ./users/viewall");
 	 //echo $url;
 	 require_once (ROOT.DS.'library'.DS.'bootstrap.php');
+	 //test
 ?>

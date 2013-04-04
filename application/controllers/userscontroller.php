@@ -32,11 +32,20 @@
 		{
 			if ( isset($_POST['submit']))
 			{
+				ECHO "KALL";EXIT();
 				$this->_model->insert_into_users($_POST);
 				header('location:../users/viewall');
 			}
 			else
 			{
+				$roles = $this->_model->select_all_userroles();
+				//var_dump($roles);
+				$userroles = '';
+				foreach($roles as $value)
+				{
+					$userroles .= "<option value='".$value['Userrole']['role']."'>".$value['Userrole']['role']."</option>";
+				}
+				$this->set('userroles', $userroles);
 				$this->set('header', 'Voeg een gebruiker toe');				
 			}
 		}
