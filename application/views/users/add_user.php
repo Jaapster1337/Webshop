@@ -1,7 +1,37 @@
-<p><h3><?php echo $header; ?></h3></p>
-	<form action='' method='post'>
+<style>
+table
+{
+	border-collapse:collapse;
+}
+
+td
+{
+	border:0px solid black;
+	padding:1em;
+}
+
+.table_title
+{
+	font-size:1.3em;
+	font-weight:bold;
+	color:RGBA(20,20,20,0.5);
+	padding-bottom:0px;
+}
+
+{
+	color:RGBA(20,20,20,0.8);
+	font-size:1.2em;
+	padding:0.5em;
+	width:230px;
+}
+</style>
 <table>
-	<tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td class='table_title'><?php echo $header; ?></td>
+		</tr>
+	<form action='./add_user' method='post'>
+		<tr>
 			<td>Voornaam</td>
 			<td><input type='text' name='firstname' /></td>
 		</tr>
@@ -15,7 +45,7 @@
 		</tr>
 		<tr>
 			<td>Emailadres</td>
-			<td><input type='text' name='emailaddres' /></td>
+			<td><input type='text' name='emailaddress' /></td>
 		</tr>
 		<tr>
 			<td>Password</td>

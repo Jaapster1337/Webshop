@@ -4,7 +4,8 @@
 			$('#dialogform').dialog('open');
 		});
 		
-		$('#dialogform').dialog({
+		$('#dialogform').dialog(
+		{
 			autoOpen:false,
 			modal:true
 		});
@@ -26,18 +27,19 @@ button
 <h2>Webshop</h2><button>login</button>
 <div id='dialogform'>
 <table>
-	<form action='' method='post' >
+	<form action='../users/login' method='post' >
 		<tr>
 			<td>gebruikersnaam</td>
 			<td><input type='text' name='username' /></td>
 		</tr>
 		<tr>
 			<td>wachtwoord</td>
-			<td><input type='text' name='username' /></td>
+			<td><input type='text' name='password' /></td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>
 			<td><input type='submit' name='submit' value='go!' /></td>
-		</tr>
+		</tr>	
+	</form>
 </table>
 </div>
