@@ -5,15 +5,31 @@
 			switch ($_SESSION['userrole'])
 			{
 				case "administrator":
-					echo "<li><a href=''>Admin1</a></li>";
-					echo "<li><a href=''>Admin2</a></li>";
-					echo "<li><a href=''>Admin3</a></li>";
-					echo "<li><a href=''>Admin4</a></li>";
-					echo "<li><a href=''>Admin5</a></li>";
-					echo "<li><a href=''>Admin6</a></li>";
+					echo "<li><a href='../administrators/viewall'>Gebruikers</a></li>";
+					echo "<li><a href='../administrators/add_user'>Add User</a></li>";
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
+				break;
+				case "root":
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
+				break;
+				case "customer":
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
+					echo "<li><a href=''>---</a></li>";
 				break;
 			}
-			echo "<li><a href='../users/logout'>logout</a></li>";
+			echo "<li><a href='../users/logout'>Logout</a></li>";
 		}
 		else
 		{

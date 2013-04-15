@@ -15,11 +15,10 @@
 	//Constructor
 	public function __construct($model, $controller, $action)
 	{		
-		$this->_model = new $model(); //Er wordt een nieuwe instantie gemaakt van de User class
-		//$this->_model = new User();
-		$this->_controller = $controller; //users
-		$this->_action = $action; //viewall
-		$this->_template = new Template($controller, $action); //new Template('users', 'viewall')
+		$this->_model = new $model();
+		$this->_controller = $controller;
+		$this->_action = $action;
+		$this->_template = new Template($controller, $action);
 	}
 	
 	public function __destruct()

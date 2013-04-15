@@ -24,17 +24,17 @@ button
 }
 </style>
 
-<h2>Webshop</h2><button>login</button>
+<h2>Webshop</h2>	<button>Login</button>
 <div id='dialogform'>
 <table>
 	<form action='../users/login' method='post' >
 		<tr>
-			<td>gebruikersnaam</td>
+			<td>Gebruikersnaam</td>
 			<td><input type='text' name='username' /></td>
 		</tr>
 		<tr>
-			<td>wachtwoord</td>
-			<td><input type='text' name='password' /></td>
+			<td>Wachtwoord</td>
+			<td><input type='password' name='password' /></td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>

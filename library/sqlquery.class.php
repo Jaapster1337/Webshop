@@ -36,15 +36,12 @@
 			$field 		= array();
 			$tempResults = array();
 			$numOfFields = mysql_num_fields($this->_result);
-			//echo $numOfFields;
 			
 			for ($i = 0; $i < $numOfFields; $i++)
 			{
 				array_push($table, mysql_field_table($this->_result, $i));
 				array_push($field, mysql_field_name($this->_result, $i));
 			}
-			//var_dump($table);
-			//var_dump($field);
 			
 			while($row = mysql_fetch_row($this->_result))
 			{
@@ -62,8 +59,6 @@
 				array_push($result, $tempResults);
 			}
 			mysql_free_result($this->_result);			
-			//var_dump($table);
-			//var_dump($result);
 			return $result;			
 		}
 	}

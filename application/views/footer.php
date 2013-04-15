@@ -1,7 +1,7 @@
-				</div><!--content-->
+				</div>
 			<div id='footer'>
 				<?php include("footer_text.php"); ?>
 			</div>
-		</div><!--container-->
+		</div>
 	</body>
 </html>

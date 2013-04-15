@@ -1,1 +1,1 @@
-<p><h3>info | disclaimer | contact | colofon | sponsors</h3></p>
+<p><h3>Footer_Text</h3></p>

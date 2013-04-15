@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>MVC framework</title>
+		<title>Webshop</title>
 		<link rel='stylesheet' href="<?php echo BASE_URL; ?>public/css/style.css" type="text/css" />
 		<link rel='stylesheet' href="<?php echo BASE_URL; ?>public/js/jquery-ui-1.10.2.custom/css/smoothness/jquery-ui-1.10.2.custom.css" type='text/css' />
 		<script type='text/javascript' src='<?php echo BASE_URL; ?>public/js/jquery-1.9.1.js'></script>

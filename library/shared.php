@@ -1,40 +1,24 @@
 <?php
 	function callHook($url)
 	{
-		/* Commentaar geldt voor bij het ingeven van de volgende url:
-		 * users/viewall/1/2/3
-		 */
-		 
+
 		$urlArray = explode('/', $url);
-		//var_dump($urlArray);
-		$controller = $urlArray[0]; //$controller = users
-		//echo $controller;
+		$controller = $urlArray[0]; 
 		array_shift($urlArray);
-		//var_dump($urlArray);
-		$action = $urlArray[0];		//$action = viewall
-		//echo $action;
+		$action = $urlArray[0];	
 		array_shift($urlArray);
-		//var_dump($urlArray);
-		$querystring = $urlArray;	//querystring = array(1, 2, 3)
-		//var_dump($querystring);
-		
-		//Mapnaam voor de controllers
-		$controllerName = $controller; //$controllername = 'users'
-		
-		/* De naam van de modelclass wordt User. Dus we moeten een hoofdletter maken
-		 * van de u en er moet een s van de naam afgehaald worden */
-		 $controller = ucwords($controller); //$controller = 'Users';
-		 //echo $controller;
-		 $model = rtrim($controller, 's');  //$model = 'User'
-		 //echo $model;
-		 $controller .= 'Controller';		//$controller = 'UsersController'
-		 //echo $controller;
+		$querystring = $urlArray;
+
+		$controllerName = $controller;
+
+		 $controller = ucwords($controller);
+		 $model = rtrim($controller, 's');  
+		 $controller .= 'Controller';
 		 $dispatch = new $controller($model, $controllerName, $action);
 		 
 		 if (method_exists($controller, $action))
 		 {
 			call_user_func_array(array($dispatch, $action), $querystring);
-			//call_user_func_array(array(new UsersController, Viewall), array(1,2,3))
 		 }
 		 else
 		 {
