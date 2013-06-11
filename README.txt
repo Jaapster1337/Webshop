@@ -1,0 +1,1 @@
+dit is een opdracht voor AM1A, het maken van een webshop met het designpattern MVC (model view control)

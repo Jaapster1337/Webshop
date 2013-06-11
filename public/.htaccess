@@ -2,5 +2,9 @@
 	RewriteEngine On
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
+<<<<<<< HEAD
 	RewriteRule ^(.*)$	index.php?url=$1 [PT,L]
+=======
+	RewriteRule ^(.*)$ index.php?url=$1 [PT,L]
+>>>>>>> fd371491575cc67e869ab783563806ccdbd35f48
 </IfModule>
