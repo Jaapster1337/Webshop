@@ -1,7 +1,27 @@
 <?php
-	define('DB_NAME', 'webshop');
-	define('DB_USER', 'webshop_root');
-	define('PASSWORD', 'geheim');
-	define('DB_HOST', 'localhost');
-	define('BASE_URL', '/webshop/');
+ $database = 0;
+ switch ($database)
+ {
+	case 0:
+		define('SERVERNAME', 'localhost');
+		define('USERNAME', 'root');
+		define('PASSWORD', 'geheim');
+		define('DATABASE', 'websitefotosjaak');
+		date_default_timezone_set("Europe/Amsterdam");
+		break;
+	case 1:
+		define('SERVERNAME', '');
+		define('USERNAME', '');
+		define('PASSWORD', '');
+		define('DATABASE', '');
+		break;
+	case 3:
+		define('SERVERNAME', '');
+		define('USERNAME', '');
+		define('PASSWORD', '');
+		define('DATABASE', '');
+		break;
+	default:
+		break;
+ }
 ?>
